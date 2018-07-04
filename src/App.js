@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import Animal from './Animal';
-import Birds from './Birds';
+import Animals from './Animals';
+import Bird from './Bird';
+import Pet from './Pet'
 
 var animals = [
   {
@@ -22,49 +23,33 @@ var animals = [
   },
 ];
 
-var birds = {
+var bird = {
   name: "Tucan",
   size: "small",
-  origin: "South America"
-}
+  origin: "Brazil"
+};
 
 class App extends Component {
   render() {
     var mappedAnimals = animals.map((animal, i) => {
-      return (<Animals name={animal.name}
-                      weight={animal.weight}
-                      ability={animal.ability}
-                      key={i} />
-        )
-      })
-      var mappedBirds = Object.keys(birds).map((key, i) => {
-        return (<Birds list = {birds[key]} key={i}/>)
-      })
       return (
-        <div className="App">
-          {mappedAnimals}
-          {mappedBirds}
-        </div>
-      );
-    }
+        <Animals
+          name={animal.name}
+          weight={animal.weight}
+          ability={animal.ability}
+          key={i}
+        />
+      )
+    })
+
+    return (
+      <div className="App">
+        {mappedAnimals}
+        <Bird bird={bird} />
+        <Pet />
+      </div>
+    );
   }
-
-
-    // });
-    // return (
-    //   <div className="App">
-    //     {mappedBirds} = birds.map((birds, i) => {
-    //
-    //     })
-    //     <Birds name={birds.name}
-    //             weight={birds.weight}
-    //             origin={birds.origin}
-    //
-    //      />
-//       </div>
-//     );
-//   }
-// }
-
+}
 
 export default App;
