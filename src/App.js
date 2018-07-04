@@ -43,10 +43,28 @@ class App extends Component {
     })
 
     return (
-      <div className="App">
-        {mappedAnimals}
-        <Bird bird={bird} />
-        <Pet bird={bird} />
+      <div className="App container">
+        <div className="row">
+          <div className="col s8 grouping-box">
+            <div className="animals">
+              {mappedAnimals}
+            </div>
+          </div>
+          <div className="col s4 grouping-box">
+            <div className="other-animals">
+              <div className="row">
+                <div className="col s12">
+                  <Bird bird={bird} />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col s12">
+                  <Pet bird={bird} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

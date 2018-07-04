@@ -26,3 +26,25 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+body {
+  background: black;
+  padding-top: 2em;
+}
+.grouping-box {
+  padding: .5em;
+}
+
+.animals {
+  border: solid black;
+  border-radius: 2em;
+  background: rgba(73, 188, 208, 0.3);
+  color: white;
+}
+
+.other-animals {
+  border: solid black;
+  border-radius: 2em;
+  background: rgba(203, 128, 201, 0.5);
+  color: white;
+}
