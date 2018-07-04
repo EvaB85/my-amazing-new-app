@@ -46,7 +46,7 @@ class App extends Component {
       <div className="App">
         {mappedAnimals}
         <Bird bird={bird} />
-        <Pet />
+        <Pet bird={bird} />
       </div>
     );
   }

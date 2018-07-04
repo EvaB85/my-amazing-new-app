@@ -14,7 +14,8 @@ class Pet extends Component {
     return (
       <div>
         <h1> Favorite Pet: {this.state.name}</h1>
-        <p>{this.state.size}h {this.state.color}min</p>
+        <p>{this.state.size} {this.state.color}</p>
+        <p>And here is a random bird from data passed from App.js: {this.props.bird.name}</p>
       </div>
     );
   }
